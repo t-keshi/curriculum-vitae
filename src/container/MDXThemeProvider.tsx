@@ -26,16 +26,16 @@ export const MDXThemeProvider: React.FC<Props> = ({ children }) => (
   <MDXProvider
     components={{
       h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <Heading as="h1" variant="h2" mt={12} mb={4} {...props} />
+        <Heading as="h1" variant="h1" mt={12} mb={4} {...props} />
       ),
       h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <Heading as="h2" variant="h3" mt={12} mb={4} {...props} />
+        <Heading as="h2" variant="h2" mt={12} mb={4} {...props} />
       ),
       h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <Heading as="h3" variant="h4" mt={12} mb={4} {...props} />
+        <Heading as="h3" variant="h3" mt={12} mb={4} {...props} />
       ),
       h4: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <Heading as="h4" variant="h5" mt={12} mb={4} {...props} />
+        <Heading as="h4" variant="h4" mt={12} mb={4} {...props} />
       ),
       h5: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
         <Heading as="h5" fontSize="lg" mt={12} mb={4} {...props} />

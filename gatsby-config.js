@@ -4,9 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'curriculum vitae',
-    siteUrl: 'https://curriculum-vitae',
-    description: 'curriculum vitae',
+    title: 't-keshi',
+    siteUrl: 'https://curriculumvitaemain.gatsbyjs.io',
+    description: '職務経歴書(t-keshi)',
     image: '/eyecatch.png',
     twitterUsername: 't__keshi',
   },
@@ -57,7 +57,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: 'https://curriculum-vitae',
+        siteUrl: 'https://curriculumvitaemain.gatsbyjs.io',
       },
     },
     'gatsby-plugin-robots-txt',

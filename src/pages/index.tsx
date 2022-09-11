@@ -29,7 +29,7 @@ const About: React.FC<PageProps<GatsbyTypes.ResumeQuery>> = ({ data }) => {
       <SEO title="職務経歴書" />
       <Layout pageTitle="職務経歴書">
         <Box mb={12} />
-        {data.allMdx.nodes.map((node) => (
+        {data.allMdx.nodes.slice(1).map((node) => (
           <MDXRenderer key={node.id}>{node.body}</MDXRenderer>
         ))}
         <Box mb={24} />

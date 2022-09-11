@@ -27,9 +27,36 @@ export const Header: React.FC = () => (
         px={{ base: 1, md: 2 }}
         columnGap={4}
       >
-        <IconButton variant="outline" aria-label="button" colorScheme="gray" icon={<SiGithub />} />
-        <IconButton variant="outline" aria-label="button" colorScheme="gray" icon={<SiTwitter />} />
-        <IconButton variant="outline" aria-label="button" colorScheme="gray" icon={<SiZenn />} />
+        <IconButton
+          variant="outline"
+          aria-label="button"
+          colorScheme="gray"
+          icon={<SiGithub />}
+          as="a"
+          href="https://github.com/t-keshi"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <IconButton
+          variant="outline"
+          aria-label="button"
+          colorScheme="gray"
+          icon={<SiTwitter />}
+          as="a"
+          href="https://twitter.com/t__keshi"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <IconButton
+          variant="outline"
+          aria-label="button"
+          colorScheme="gray"
+          icon={<SiZenn />}
+          as="a"
+          href="https://zenn.dev/"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
         <Button colorScheme="primary" variant="outline" as="a" href="/all.pdf" download>
           Download PDF
         </Button>
