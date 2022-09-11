@@ -3936,10 +3936,7 @@ type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArr
 type ResumeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ResumeQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<(
-      Pick<Mdx, 'id' | 'body'>
-      & { readonly frontmatter: Maybe<Pick<MdxFrontmatter, 'title'>> }
-    )> } };
+type ResumeQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<Pick<Mdx, 'body' | 'slug'>> } };
 
 type SiteMetaDataQueryVariables = Exact<{ [key: string]: never; }>;
 

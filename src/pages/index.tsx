@@ -9,18 +9,15 @@ export const pageQuery = graphql`
   query Resume {
     allMdx {
       nodes {
-        id
         body
-        frontmatter {
-          title
-        }
+        slug
       }
     }
   }
 `;
 
 const About: React.FC<PageProps<GatsbyTypes.ResumeQuery>> = ({ data }) => {
-  if (!data || !data.allMdx?.nodes[0].body || !data.allMdx?.nodes[0].id) {
+  if (!data || !data.allMdx?.nodes[0].body || !data.allMdx?.nodes[0].slug) {
     return null;
   }
 
@@ -29,9 +26,13 @@ const About: React.FC<PageProps<GatsbyTypes.ResumeQuery>> = ({ data }) => {
       <SEO title="職務経歴書" />
       <Layout pageTitle="職務経歴書">
         <Box mb={12} />
-        {data.allMdx.nodes.slice(1).map((node) => (
-          <MDXRenderer key={node.id}>{node.body}</MDXRenderer>
-        ))}
+        {data.allMdx.nodes
+          .slice(0)
+          .sort((node) => parseInt(node.slug?.slice(0, 2) ?? '1', 10))
+          .slice(1)
+          .map((node) => (
+            <MDXRenderer key={node.slug}>{node.body}</MDXRenderer>
+          ))}
         <Box mb={24} />
         {/* <LinkButton
           as="button"
